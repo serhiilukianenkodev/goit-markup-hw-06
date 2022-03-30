@@ -629,6 +629,8 @@ header {
 }
 
 .modal {
+  padding: 40px;
+
   min-width: 528px;
   min-height: 581px;
   position: absolute;
@@ -657,6 +659,16 @@ header {
   border-radius: 50%;
   margin: 0;
   padding: 0;
+}
+
+.formfield {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
 }
 
 /* Visually hidden */

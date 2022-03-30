@@ -456,6 +456,42 @@
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <form>
+          <p>Оставьте свои данные, мы вам перезвоним</p>
+          <div class="formfield">
+            <label for="user-name">Имя</label>
+            <input type="text" name="user-name" id="user-name" />
+          </div>
+
+          <div class="formfield">
+            <label for="phone">Телефон</label>
+            <input type="tel" name="user-phone" id="phone" />
+          </div>
+
+          <div class="formfield">
+            <label for="mail">Почта</label>
+            <input type="email" name="user-mail" id="mail" />
+          </div>
+
+          <div class="formfield">
+            <label for="comment">Комментарий</label>
+            <textarea
+              name="user-comment"
+              id="comment"
+              rows="4"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+
+          <div class="formfield">
+            <label for="policy">
+              Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+            </label>
+            <input type="checkbox" name="policy" id="policy" />
+          </div>
+
+          <button class="button" type="submit">Отправить</button>
+        </form>
         <button class="close-btn" data-modal-close>
           <svg width="11" height="11">
             <use href="./images/sprite.svg#pics-close"></use>
