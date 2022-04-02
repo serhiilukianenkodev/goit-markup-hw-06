@@ -193,6 +193,7 @@ header {
 }
 
 .button {
+    border: none;
   padding: 10px;
   min-width: 200px;
   font-weight: 700;
@@ -487,11 +488,50 @@ header {
   color: #ffffff;
 }
 
+.subscription .form-field{
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.subscription .label{
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.subscription .input{
+  display: inline-block;
+  min-width: 353px;
+  height: 50px;
+  background-color: inherit;
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.subscription .input:focus-within{
+  outline: none;
+}
+
+.subscription .input:focus-within + .label,
+.subscription .input:not(:placeholder-shown)+.label
+{
+  transform: translate(-70px, -50%);
+}
 
 .subscription .button{
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
 }
+
+.subscription .btn-icon{margin-left: 10px;}
 
 /*  portfolio*/
 .portfolio {
@@ -709,10 +749,6 @@ header {
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .form-input:not(:placeholder-shown){
-    border-color: var(--text-accent);
-
-} */
 
 .form-input:focus{
    outline: 1px solid var(--text-accent);
@@ -771,7 +807,6 @@ align-items: center;
 }
 
 .policy .checkbox{
-    position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -783,22 +818,37 @@ align-items: center;
     overflow: hidden;
 }
 
-.policy .checkbox:checked ~ .icon{
-  background: tomato;
+.policy{position: relative;}
+
+.policy .checkbox:checked ~ .unchecked{
+opacity: 0;}
+
+.policy .checkbox:checked~ .checked {
+  opacity: 1;
 }
 
-.policy .icon{
+.policy .checked{
+  opacity: 0;
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy .unchecked {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy .checked,
+.policy .unchecked{
   position: absolute;
-  left: 0px;
+  left: 12px;
   top: 50%;
-
   transform: translateY(-50%);
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--text-heading);
-  border-radius: 4px;
 
+  pointer-events: none;
+}
 
+.policy .form-label{
+  padding-left: 26px;
 }
 
 .form-feedback .button{

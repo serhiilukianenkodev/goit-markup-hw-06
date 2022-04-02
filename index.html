@@ -446,12 +446,13 @@
 
         <form class="subscription">
           <h2>Подпишитесь на рассылку</h2>
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" />
-
+          <div class="form-field">
+            <input type="email" name="email" id="email" class="input" placeholder=" " />
+            <label for="email" class="label">E-mail</label>
+          </div>
           <button class="button" type="submit">
             Подписаться
-            <svg class="" width="24" height="24">
+            <svg class="btn-icon" width="24" height="24">
               <use href="./images/sprite.svg#send"></use>
             </svg>
           </button>
@@ -505,11 +506,12 @@
               Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
             </label>
 
-            <span class="icon">
-              <svg width="16" height="15">
-                <use href="./images/sprite.svg#form-check"></use>
-              </svg>
-            </span>
+            <svg class="checked" width="16" height="15">
+              <use href="./images/sprite.svg#form-check"></use>
+            </svg>
+            <svg class="unchecked" width="16" height="15">
+              <use href="./images/sprite.svg#form-uncheck"></use>
+            </svg>
           </div>
 
           <button class="button" type="submit">Отправить</button>
