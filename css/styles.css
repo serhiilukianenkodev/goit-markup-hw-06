@@ -756,7 +756,8 @@ header {
 
 
 .form-input:focus{
-   outline: 1px solid var(--text-accent);
+   border: 1px solid var(--text-accent);
+   outline: none;
 }
 
 .form-icon{
